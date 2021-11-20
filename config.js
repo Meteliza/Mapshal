@@ -1,14 +1,14 @@
-
 const config = {
-  style: "mapbox://styles/mapbox/light-v10",
+  style: "mapbox://styles/15000rpm/cka866i4c27251iog7qfpohwc",
+  //style: "mapbox://styles/mapbox/light-v10",
   accessToken:
     "pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg",
   center: [41, 57.116],
   zoom: 10,
-  title: "Mapshal",
+  title: "Mapshal-beta",
   description:
-    "GUANGGAOWEIZAOZHU",
-  sideBarInfo: ["Name", "Address", "Intro"],
+    "测试版瞎搞搞上线，内容完善、功能建议、bug反馈等请发至qmuooo@gmail.com",
+  sideBarInfo: ["Name", "Fname", "Address",'Date_1','Date_2',"Intro"],
   popupInfo: ["Name"],
   filters: [
     {
