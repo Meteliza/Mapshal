@@ -5,12 +5,14 @@
 #filterResults{
     font-size: 12px;
     color: white;
-    background-color: #448EE4;
+    background-color: #c9392e;
+    /*background-color: #448EE4;*/
 
 }
 
 .theme{
-    background-color: #2A395F;
+    background-color: #85231b;
+    /*background-color: #2A395F;*/
 }
 
 .select{
@@ -85,11 +87,10 @@
   }
 
 .mapboxgl-popup-content h3 {
-    color:black;
+    color: black;
     font-weight: 500;
     margin: 0;
     display: block;
-
   }
 
 
