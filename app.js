@@ -1,6 +1,4 @@
-/* global config csv2geojson turf Assembly $ */
 'use strict';
-
 mapboxgl.accessToken = config.accessToken;
 const columnHeaders = config.sideBarInfo;
 
@@ -418,7 +416,7 @@ map.on('load', () => {
     console.log('ready');
     $.ajax({
       type: 'GET',
-      url: 'https://docs.google.com/spreadsheets/d/1QtTYXlSWrYb4xXV5m1CphgbJ9OD34rHvGPdZH7I_v1I/gviz/tq?tqx=out:csv&sheet=MapboxTest',
+      url: 'https://docs.google.com/spreadsheets/d/17OBJ3wW9f-iPTmRaQFi3KaXteuoXh6BpsImgkfBu5F4/gviz/tq?tqx=out:csv&sheet=Mapshal',
       dataType: 'text',
       success: function (csvData) {
         makeGeoJSON(csvData);
@@ -512,3 +510,4 @@ function transformRequest(url) {
     url: isMapboxRequest ? url.replace('?', '?pluginName=finder&') : url,
   };
 }
+
