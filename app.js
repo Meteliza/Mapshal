@@ -418,7 +418,7 @@ map.on('load', () => {
     console.log('ready');
     $.ajax({
       type: 'GET',
-      url: config.CSV,
+      url: 'https://docs.google.com/spreadsheets/d/1QtTYXlSWrYb4xXV5m1CphgbJ9OD34rHvGPdZH7I_v1I/gviz/tq?tqx=out:csv&sheet=MapboxTest',
       dataType: 'text',
       success: function (csvData) {
         makeGeoJSON(csvData);
