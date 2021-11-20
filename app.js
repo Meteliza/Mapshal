@@ -414,7 +414,7 @@ map.on("load", function () {
     console.log("ready");
     $.ajax({
       type: "GET",
-      url: config.CSV,
+      url: https://docs.google.com/spreadsheets/d/17OBJ3wW9f-iPTmRaQFi3KaXteuoXh6BpsImgkfBu5F4/gviz/tq?tqx=out:csv&sheet=Mapshal,
       dataType: "text",
       success: function (csvData) {
         makeGeoJSON(csvData);
@@ -440,14 +440,13 @@ map.on("load", function () {
           data.properties.id = i;
         });
 
-        geojsonData = data;
         // Add the the layer to the map
         map.addLayer({
           id: "locationData",
           type: "circle",
           source: {
             type: "geojson",
-            data: geojsonData,
+            data: data,
           },
           paint: {
             "circle-radius": 5, // size of circles
@@ -477,7 +476,7 @@ map.on("load", function () {
     map.on("mouseleave", "locationData", function () {
       map.getCanvas().style.cursor = "";
     });
-    buildLocationList(geojsonData);
+    buildLocationList(data);
   }
 });
 
