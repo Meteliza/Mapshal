@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8' />
-  <title></title>
+  <title>Mapshal</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
@@ -29,36 +29,25 @@
           : url
       };
     };
-    //YOUR TURN: add your Mapbox token
     
-    mapboxgl.accessToken = 'pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg'; //Mapbox token 
+    mapboxgl.accessToken = 'pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg'; 
     var map = new mapboxgl.Map({
       container: 'map', // container id
-      style: 'mapbox://styles/mapbox/streets-v11', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
+      style: 'mapbox://styles/mapbox/streets-v11', 
       center: [41, 57.116],
       //center: [42.115951, 57.442625], // starting position [lng, lat]
       zoom: 10,// starting zoom
       transformRequest: transformRequest
     });
 
-		//导航
-    map.addControl(
-        new MapboxDirections({
-            accessToken: mapboxgl.accessToken
-        }),
-        'top-left'
-    );
-
 
     $(document).ready(function () {
       $.ajax({
         type: "GET",
-        //YOUR TURN: Replace with csv export link
         url: 'https://docs.google.com/spreadsheets/d/17OBJ3wW9f-iPTmRaQFi3KaXteuoXh6BpsImgkfBu5F4/gviz/tq?tqx=out:csv&sheet=Mapshal',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
-
 
 
       function makeGeoJSON(csvData) {
@@ -94,7 +83,7 @@
               // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
               var description = 
               `<h3>` + e.features[0].properties.Name + `</h3>` + 
-              //`<h4>` + e.features[0].properties.Time_1 + ` - ` + e.features[0].properties.Time_2 + `</h4>` + 
+              `<h4>` + e.features[0].properties.Time_1 + ` - ` + e.features[0].properties.Time_2 + `</h4>` + 
               `<h4>` + `<b>` + `介绍: ` + `</b>` + e.features[0].properties.Intro + `</h4>` + 
               `<h4>` + `<b>` + `地址: ` + `</b>` + e.features[0].properties.Address + `</h4>` + 
               `<h4>` + `<b>` + `出处: ` + `</b>` + e.features[0].properties.Ref + `</h4>`;
@@ -140,5 +129,7 @@
   </script>
 
 </body>
+
+<script src="app.js"></script>
 
 </html>
