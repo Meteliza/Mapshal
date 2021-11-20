@@ -1,3 +1,4 @@
+/* global config csv2geojson turf Assembly $ */
 'use strict';
 mapboxgl.accessToken = config.accessToken;
 const columnHeaders = config.sideBarInfo;
