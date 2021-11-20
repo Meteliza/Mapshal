@@ -1,5 +1,6 @@
 /* global config csv2geojson turf Assembly $ */
 'use strict';
+
 mapboxgl.accessToken = config.accessToken;
 const columnHeaders = config.sideBarInfo;
 
@@ -16,6 +17,8 @@ const map = new mapboxgl.Map({
   zoom: config.zoom,
   transformRequest: transformRequest,
 });
+
+
 
 function flyToLocation(currentFeature) {
   map.flyTo({
@@ -453,8 +456,10 @@ map.on('load', () => {
             data: geojsonData,
           },
           paint: {
-            'circle-radius': 5, // size of circles
-            'circle-color': '#3D2E5D', // color of circles
+            'circle-radius': 7, // size of circles
+            //'circle-radius': 5,
+            'circle-color': 'darkred', // color of circles
+            //'circle-color': '#3D2E5D',
             'circle-stroke-color': 'white',
             'circle-stroke-width': 1,
             'circle-opacity': 0.7,
@@ -484,6 +489,17 @@ map.on('load', () => {
   }
 });
 
+//导航
+map.addControl(
+    new MapboxDirections({
+        accessToken: mapboxgl.accessToken
+    }),
+    'top-left'
+);
+    
+//放大缩小
+map.addControl(new mapboxgl.NavigationControl());
+   
 // Modal - popup for filtering results
 const filterResults = document.getElementById('filterResults');
 const exitButton = document.getElementById('exitButton');
