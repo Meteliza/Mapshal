@@ -414,7 +414,7 @@ map.on("load", function () {
     console.log("ready");
     $.ajax({
       type: "GET",
-      url: config.CSV,
+      url: https://docs.google.com/spreadsheets/d/17OBJ3wW9f-iPTmRaQFi3KaXteuoXh6BpsImgkfBu5F4/gviz/tq?tqx=out:csv&sheet=Mapshal,
       dataType: "text",
       success: function (csvData) {
         makeGeoJSON(csvData);
