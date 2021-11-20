@@ -76,7 +76,8 @@
 </head>
 
 <body>
-
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
   <div id='map'></div>
   <script>
 
@@ -101,6 +102,15 @@
       zoom: 10,// starting zoom
       transformRequest: transformRequest
     });
+
+		//导航
+    map.addControl(
+        new MapboxDirections({
+            accessToken: mapboxgl.accessToken
+        }),
+        'top-left'
+    );
+
 
     $(document).ready(function () {
       $.ajax({
@@ -146,7 +156,7 @@
               // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
               var description = 
               `<h3>` + e.features[0].properties.Name + `</h3>` + 
-              `<h4>` + e.features[0].properties.Time_1 + `-` + e.features[0].properties.Time_2 + `</h4>` + 
+              //`<h4>` + e.features[0].properties.Time_1 + ` - ` + e.features[0].properties.Time_2 + `</h4>` + 
               `<h4>` + `<b>` + `介绍: ` + `</b>` + e.features[0].properties.Intro + `</h4>` + 
               `<h4>` + `<b>` + `地址: ` + `</b>` + e.features[0].properties.Address + `</h4>` + 
               `<h4>` + `<b>` + `出处: ` + `</b>` + e.features[0].properties.Ref + `</h4>`;
@@ -175,6 +185,7 @@
             map.on('mouseleave', 'places', function () {
               map.getCanvas().style.cursor = '';
             });
+
 
             var bbox = turf.bbox(data);
             map.fitBounds(bbox, { padding: 50 });
