@@ -493,7 +493,8 @@ map.on('load', () => {
 //导航
 map.addControl(
     new MapboxDirections({
-        accessToken: mapboxgl.accessToken
+        accessToken: mapboxgl.accessToken,
+        language: 'zh'
     }),
     'top-left'
 );
