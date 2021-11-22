@@ -7,7 +7,7 @@ const config = {
   zoom: 10,
   title: "Mapshal-beta",
   description:
-    "测试版瞎搞搞上线，内容完善、功能建议、bug反馈等请发至qmuooo@gmail.com",
+    "测试版瞎搞搞上线，内容、功能完善及bug反馈等请发至ooomuq@gmail.com",
   sideBarInfo: ["Name", "Fname", "Address",'Date_1','Date_2',"Intro"],
   popupInfo: ["Name"],
   filters: [
@@ -16,16 +16,18 @@ const config = {
       title: "地点类型: ",
       columnHeader: "Type",
       listItems: [
-        "房屋",
+        "住所",
         "学校",
-        "景点",
+        "教堂",
+        "疗养院",
+        "博物馆",
       ],
     },
     {
       type: "checkbox",
       title: "人物: ",
       columnHeader: "PPL", // Case sensitive - must match spreadsheet entry
-      listItems: ["华西列夫斯基", "切尔尼亚霍夫斯基","朱可夫","罗科索夫斯基","安东诺夫","什捷缅科","华西列夫斯基父亲","尤里","伊戈尔"], // Case sensitive - must match spreadsheet entry; This will take up to six inputs but is best used with a maximum of three;
+      listItems: ["华西列夫斯基", "切尔尼亚霍夫斯基","朱可夫","罗科索夫斯基","安东诺夫","什捷缅科","尤里","伊戈尔"], // Case sensitive - must match spreadsheet entry; This will take up to six inputs but is best used with a maximum of three;
     },
     //{
       //type: "dropdown",
