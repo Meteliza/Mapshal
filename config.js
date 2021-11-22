@@ -1,5 +1,5 @@
 const config = {
-  style: "mapbox://styles/15000rpm/cka866i4c27251iog7qfpohwc",
+  style: "mapbox://styles/15000rpm/ckwamo3cw1tbr14piraxr8met",
   //style: "mapbox://styles/mapbox/light-v10",
   accessToken:
     "pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg",
