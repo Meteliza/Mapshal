@@ -502,7 +502,8 @@ map.on('load', () => {
       ]
     },
     minzoom: 0,
-    maxzoom: 22
+    maxzoom: 22,
+    paint:{"raster-opacity":0.5}
   });
 });
 
@@ -511,7 +512,7 @@ map.on('load', () => {
 map.addControl(
     new MapboxDirections({
         accessToken: mapboxgl.accessToken,
-        language: 'zh'
+        language: 'zh-Hans'
     }),
     'top-left'
 );
