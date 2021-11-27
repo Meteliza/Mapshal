@@ -513,7 +513,23 @@ map.on('load', () => {
 //叠加地图
 map.on('load', () => {
   map.addLayer({
-    id: 'raster-layer',
+    id: 'raster-layer-kineshma',
+    type: 'raster',
+    source: {
+      type: 'raster',
+      tiles: [
+        'https://a.tiles.mapbox.com/v4/15000rpm.dnav9ph4/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg'
+      ]
+    },
+    minzoom: 0,
+    maxzoom: 22,
+    paint:{"raster-opacity":1.0}
+  });
+});
+
+map.on('load', () => {
+  map.addLayer({
+    id: 'raster-layer-kostroma',
     type: 'raster',
     source: {
       type: 'raster',
