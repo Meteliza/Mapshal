@@ -523,7 +523,7 @@ map.on('load', () => {
     },
     minzoom: 0,
     maxzoom: 22,
-    paint:{"raster-opacity":0.5}
+    paint:{"raster-opacity":0.8}
   });
 });
 
