@@ -534,7 +534,7 @@ map.on('load', () => {
     source: {
       type: 'raster',
       tiles: [
-        'https://a.tiles.mapbox.com/v4/15000rpm.devza11u/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg'
+        'https://a.tiles.mapbox.com/v4/15000rpm.3cxplbcb/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg'
       ]
     },
     minzoom: 0,
