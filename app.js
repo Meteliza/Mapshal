@@ -477,13 +477,14 @@ map.on('load', () => {
             data: geojsonData,
           },
           paint: {
-            'circle-radius': 7, // size of circles
+            'circle-radius': ['interpolate',['linear'],['zoom'],10,5,13,7], // size of circles
             //'circle-radius': 5,
-            'circle-color': 'darkred', // color of circles
+            'circle-color': 'red', // color of circles
             //'circle-color': '#3D2E5D',
-            'circle-stroke-color': 'white',
-            'circle-stroke-width': 1,
-            'circle-opacity': 0.7,
+            'circle-stroke-color': 'red',
+            'circle-stroke-width': ['interpolate',['linear'],['zoom'],10,4,13,9],
+            'circle-opacity': 0.8,
+            'circle-stroke-opacity': 0.2,
           },
         });
       },
