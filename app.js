@@ -511,47 +511,47 @@ map.on('load', () => {
 });
 
 //叠加地图
-map.on('load', () => {
-  map.addLayer({
-    id: 'raster-layer-kineshma',
-    type: 'raster',
-    source: {
-      type: 'raster',
-      tiles: [
-        'https://a.tiles.mapbox.com/v4/15000rpm.dnav9ph4/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg'
-      ]
-    },
-    minzoom: 0,
-    maxzoom: 22,
-    paint:{"raster-opacity":1.0}
-  });
-});
+// map.on('load', () => {
+//   map.addLayer({
+//     id: 'raster-layer-kineshma',
+//     type: 'raster',
+//     source: {
+//       type: 'raster',
+//       tiles: [
+//         'https://a.tiles.mapbox.com/v4/15000rpm.dnav9ph4/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg'
+//       ]
+//     },
+//     minzoom: 0,
+//     maxzoom: 22,
+//     paint:{"raster-opacity":1.0}
+//   });
+// });
 
-map.on('load', () => {
-  map.addLayer({
-    id: 'raster-layer-kostroma',
-    type: 'raster',
-    source: {
-      type: 'raster',
-      tiles: [
-        'https://a.tiles.mapbox.com/v4/15000rpm.3cxplbcb/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg'
-      ]
-    },
-    minzoom: 0,
-    maxzoom: 22,
-    paint:{"raster-opacity":1.0}
-  });
-});
+// map.on('load', () => {
+//   map.addLayer({
+//     id: 'raster-layer-kostroma',
+//     type: 'raster',
+//     source: {
+//       type: 'raster',
+//       tiles: [
+//         'https://a.tiles.mapbox.com/v4/15000rpm.3cxplbcb/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiMTUwMDBycG0iLCJhIjoiY2thMjlmMmI2MDFyZDNncWJqdDRrM3JodSJ9.r7ZzMR34a2YZtNXSOVmZEg'
+//       ]
+//     },
+//     minzoom: 0,
+//     maxzoom: 22,
+//     paint:{"raster-opacity":1.0}
+//   });
+// });
 
 
 //导航
-map.addControl(
-    new MapboxDirections({
-        accessToken: mapboxgl.accessToken,
-        language: 'zh-Hans'
-    }),
-    'top-left'
-);
+// map.addControl(
+//     new MapboxDirections({
+//         accessToken: mapboxgl.accessToken,
+//         language: 'zh-Hans'
+//     }),
+//     'top-left'
+// );
     
 //放大缩小
 map.addControl(new mapboxgl.NavigationControl());
