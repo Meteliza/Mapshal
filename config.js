@@ -7,7 +7,7 @@ const config = {
   zoom: 10,
   title: "Mapshal-beta",
   description:
-    "测试版瞎搞搞上线，内容、功能完善及bug反馈等请发至<a style='text-decoration: underline' href='https://i-saw-you.lofter.com/'>ooomuq@gmail.com</a>。",
+    "aaa<a style='text-decoration: underline' href='https://i-saw-you.lofter.com/'>ooomuq@gmail.com</a>",
   sideBarInfo: ["Name", "Fname", "Address",'Date_1','Date_2',"Intro"],
   popupInfo: ["Name"],
   filters: [
