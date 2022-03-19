@@ -574,7 +574,7 @@ exitButton.addEventListener('click', () => {
 const title = document.getElementById('title');
 title.innerText = config.title;
 const description = document.getElementById('description');
-description.innerText = config.description;
+description.innerHTML = config.description;
 
 function transformRequest(url) {
   const isMapboxRequest =
