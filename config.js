@@ -7,7 +7,7 @@ const config = {
   zoom: 10,
   title: "Mapshal-beta",
   description:
-    "aaa<a style='text-decoration: underline' href='https://i-saw-you.lofter.com/'>ooomuq@gmail.com</a>",
+    "Want to support black restaurants? This map has amazing options to try. Filter the list by cuisine and price, or enter your location in the search bar to see restaurants near you. Created by <a style='text-decoration: underline' href='https://www.erinborders.me/'>Erin Borders</a>.",
   sideBarInfo: ["Name", "Fname", "Address",'Date_1','Date_2',"Intro"],
   popupInfo: ["Name"],
   filters: [
