@@ -10,6 +10,8 @@
 
 }
 
+.mapboxgl-ctrl-attrib-inner a:last-of-type { display: none; }
+
 .theme{
     background-color: #85231b;
     /*background-color: #2A395F;*/
